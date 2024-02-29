@@ -17,7 +17,7 @@ public class UI {
             String userInput = iScanner.nextLine().trim();
             switch (userInput) {
                 case "1":
-                    System.out.println("\nEnter a string like:");
+                    System.out.println("\nEnter the values in the recommended order, separated by spaces:");
                     System.out.print(
                             "<last name> <first name> <middle name> <birth_date> <telephone_number> <gender>\n> ");
                     String inputData = iScanner.nextLine().trim();
