@@ -19,6 +19,30 @@ public class User {
         this.gender = gender;
     }
 
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public String getMiddleName() {
+        return middleName;
+    }
+
+    public String getBirthDate() {
+        return birthDate;
+    }
+
+    public long getPhoneNumber() {
+        return phoneNumber;
+    }
+
+    public char getGender() {
+        return gender;
+    }
+
     @Override
     public String toString() {
         return String.format("%s.%s. %s\t%s (%s)", firstName.charAt(0), middleName.charAt(0),
