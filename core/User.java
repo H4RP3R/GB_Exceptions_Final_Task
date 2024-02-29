@@ -45,8 +45,8 @@ public class User {
 
     @Override
     public String toString() {
-        return String.format("%s.%s. %s\t%s (%s)", firstName.charAt(0), middleName.charAt(0),
-                lastName, phoneNumber, birthDate, gender);
+        return String.format("%16s %s.%s. %16s (%s)", lastName, firstName.charAt(0), middleName.charAt(0),
+                phoneNumber, birthDate, gender);
     }
 
     @Override

@@ -1,8 +1,10 @@
 package view;
 
 import java.util.Scanner;
+import java.util.Set;
 
 import controller.UserController;
+import core.User;
 
 public class UI {
     public void mainMenu(Scanner iScanner, UserController userController) {
@@ -17,7 +19,7 @@ public class UI {
                 case "1":
                     System.out.println("\nEnter a string like:");
                     System.out.print(
-                            "<Last name> <First name> <Middle name> <birth_date> <telephone_number> <gender>\n> ");
+                            "<last name> <first name> <middle name> <birth_date> <telephone_number> <gender>\n> ");
                     String inputData = iScanner.nextLine().trim();
                     try {
                         userController.saveUser(inputData);
@@ -27,7 +29,14 @@ public class UI {
                     break;
 
                 case "2":
-
+                    try {
+                        Set<User> users = userController.listUsers();
+                        for (User user : users) {
+                            System.out.println(user);
+                        }
+                    } catch (Exception e) {
+                        System.err.println("Cant'r read data.");
+                    }
                     break;
 
                 case "3":
