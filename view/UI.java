@@ -35,7 +35,7 @@ public class UI {
                             System.out.println(user);
                         }
                     } catch (Exception e) {
-                        System.err.println("Cant'r read data.");
+                        System.err.println("Can't read data.");
                     }
                     break;
 

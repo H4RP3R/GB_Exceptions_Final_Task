@@ -23,10 +23,10 @@ public class UserRepository {
     public UserRepository() {
         this.users = new HashSet<>();
         this.dataPath = "data";
+        createDataFolder();
     }
 
     public void saveUser(User user) throws Exception {
-        createDataFolder();
         readAllUsers();
 
         if (users.contains(user)) {

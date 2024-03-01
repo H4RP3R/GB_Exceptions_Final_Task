@@ -29,11 +29,21 @@ public class UserDataParser {
             throw new WrongBirthDateFormatException();
         }
 
+        List<String> strNumbers = Arrays.asList(birthDate.split("\\."));
+        int firstNumber = Integer.parseInt(strNumbers.get(0));
+        if (firstNumber < 1 || firstNumber > 31) {
+            throw new WrongBirthDateFormatException();
+        }
+        int secondNumber = Integer.parseInt(strNumbers.get(1));
+        if (secondNumber < 1 || secondNumber > 12) {
+            throw new WrongBirthDateFormatException();
+        }
+
         // Phone
         long phoneNumber;
 
         try {
-            phoneNumber = Long.parseLong(dataList.get(4));
+            phoneNumber = Math.abs(Long.parseLong(dataList.get(4)));
         } catch (NumberFormatException e) {
             throw new WrongPhoneNumberFormatException();
         }
