@@ -41,7 +41,6 @@ public class UserDataParser {
 
         // Phone
         long phoneNumber;
-
         try {
             phoneNumber = Math.abs(Long.parseLong(dataList.get(4)));
         } catch (NumberFormatException e) {
@@ -56,5 +55,4 @@ public class UserDataParser {
 
         return new User(firstName, secondName, lastName, birthDate, phoneNumber, gender);
     }
-
 }

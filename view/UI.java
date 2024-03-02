@@ -24,7 +24,7 @@ public class UI {
                     try {
                         userController.saveUser(inputData);
                     } catch (Exception e) {
-                        System.err.println(e.getMessage());
+                        System.err.println(e.getMessage() == null ? "Cant't save data." : e.getMessage());
                     }
                     break;
 

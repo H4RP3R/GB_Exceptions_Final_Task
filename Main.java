@@ -5,4 +5,3 @@ public class Main {
         AppRunner.run();
     }
 }
-// TODO: Date validation. Find errors, fix issues.
