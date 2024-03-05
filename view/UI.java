@@ -13,6 +13,7 @@ public class UI {
             System.out.println("2. List users.");
             System.out.println("3. Exit.");
 
+            System.out.println("Enter option number");
             System.out.print("> ");
             String userInput = iScanner.nextLine().trim();
             switch (userInput) {
